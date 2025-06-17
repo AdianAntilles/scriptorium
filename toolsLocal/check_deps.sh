@@ -30,6 +30,7 @@ pckInfo() {
 
 ### Main: Pakete mit Updates prüfen
 updates=( ${(f)"$(checkupdates 2>/dev/null)"} )
+echo -e "$updates"
 
 for update in $updates; do
     pkg=${update%% *}  # Paketname extrahieren
