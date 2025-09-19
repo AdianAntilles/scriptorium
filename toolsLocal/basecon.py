@@ -18,9 +18,9 @@ output_system = args.output_system
 
 ### functions ###
 
-def verbosity(echo):
-    if args.verbose == true
-        print(echo)
+def verbosity(*echo):
+    if args.verbose:
+        print(*echo)
 
 def ziffernmenge(basis):
     if basis <= 10:
@@ -44,7 +44,7 @@ i = 0
 while b >= 1:
 	b = b/stellenwerte
 	i += 1
-verbosity("Stellen:", i)
+verbosity("Stellen:", int(i))
 
 conversed = ""
 d = input_number
@@ -55,10 +55,10 @@ while i > 0:
 	zahl = d/(output_system**i)
 	verbosity("Divisor: ", int(zahl))
 	modulus = d%(output_system**i)
-	verbosity("Modulo:", modulus)
+	verbosity("Modulo:", int(modulus))
 	m = int((d-modulus)/(output_system**i))
 	d = modulus
-	verbosity("Übernahme nächste Stelle: ", m, d)
+	verbosity("Übernahme nächste Stelle: ", int(m), int(d))
 	conversed += stelle[m]
 	
 	
