@@ -19,7 +19,7 @@ output_system = args.output_system
 ### functions ###
 
 def verbosity(echo):
-    if args.verbose == true
+    if args.verbose == true:
         print(echo)
 
 def ziffernmenge(basis):
