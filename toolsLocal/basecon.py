@@ -11,10 +11,9 @@ argparser.add_argument('input_number', type=int)
 argparser.add_argument('output_system',type=int) #int1-36
 argparser.add_argument('-v', '--verbose', action='store_true', help='prints steps between calculations')
 args = argparser.parse_args()
+input_system = args.input_system
 input_number = args.input_number 
 output_system = args.output_system
-
-
 
 ### functions ###
 
@@ -32,7 +31,9 @@ def ziffernmenge(basis):
     else:
         raise ValueError("Basis zu groß – max. 36 unterstützt.")
 
+### input recap ###
 
+verbosity(input_system, input_number, output_system)
         
 ### main ###
 stelle = ziffernmenge(output_system)

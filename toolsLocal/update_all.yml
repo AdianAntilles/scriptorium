@@ -1,0 +1,13 @@
+- name: My first play
+  hosts: mypyhosts
+  tasks:
+    name: Print message
+    ansible.builtin.debug:
+    msg: Hello world
+- name: Banana
+  hosts: myshhosts  
+  gather_facts: no
+  tasks:
+    - name: Get disk space
+      raw: df -h
+      register: raw_diskspace
