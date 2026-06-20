@@ -2,3 +2,4 @@ common_venv/
 RandMon/target/*
 toolsLocal/inventory.ini
 mo.sh
+MagicKindle/*
